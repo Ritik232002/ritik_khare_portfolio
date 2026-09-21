@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Ritik Khare — Data Analyst portfolio">
+<title>Ritik Khare | Data Analyst</title>
+<style>
+:root{--bg:#07100d;--panel:#0d1814;--panel2:#111f1a;--text:#edf7f2;--muted:#9db0a7;--accent:#73e6a8;--accent2:#b7f7d2;--line:#20362c;--danger:#ff7777}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 80% 0%,#173d2d 0,transparent 32%),var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;line-height:1.6}a{color:inherit;text-decoration:none}.wrap{width:min(1120px,92%);margin:auto}
+nav{position:sticky;top:0;z-index:10;background:rgba(7,16,13,.82);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}nav .wrap{height:70px;display:flex;align-items:center;justify-content:space-between}.logo{font-weight:800;letter-spacing:.5px}.logo span{color:var(--accent)}nav .links{display:flex;gap:25px;color:var(--muted);font-size:14px}nav .links a:hover{color:var(--accent)}
+.hero{min-height:690px;display:grid;align-items:center;padding:90px 0}.eyebrow{color:var(--accent);font-weight:700;letter-spacing:2px;text-transform:uppercase;font-size:13px}.hero h1{font-size:clamp(48px,8vw,94px);line-height:.95;margin:18px 0;max-width:900px;letter-spacing:-4px}.hero h1 em{font-style:normal;color:var(--accent)}.hero p{max-width:650px;color:var(--muted);font-size:19px}.actions{display:flex;gap:12px;margin-top:30px;flex-wrap:wrap}.btn{padding:13px 19px;border:1px solid var(--line);border-radius:10px;background:var(--panel);font-weight:700;cursor:pointer}.btn.primary{background:var(--accent);color:#06100b;border-color:var(--accent)}.btn:hover{transform:translateY(-1px)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:16px;overflow:hidden;margin-bottom:100px}.stat{background:var(--panel);padding:25px}.stat b{display:block;font-size:28px;color:var(--accent)}.stat span{color:var(--muted);font-size:13px}
+section{padding:90px 0}.section-head{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:35px}.section-head h2{font-size:42px;line-height:1;margin:0}.section-head p{color:var(--muted);max-width:520px;margin:0}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:55px}.about p{color:var(--muted);font-size:17px}.skills{display:flex;flex-wrap:wrap;gap:10px;margin-top:25px}.skill{padding:8px 12px;border:1px solid var(--line);border-radius:999px;background:var(--panel);font-size:13px}
+.feature{background:linear-gradient(135deg,#11281e,#0b1511);border:1px solid var(--line);border-radius:20px;padding:35px;display:grid;grid-template-columns:1.1fr .9fr;gap:35px}.feature h3{font-size:36px;margin:12px 0}.feature p{color:var(--muted)}.kpi{display:grid;grid-template-columns:1fr 1fr;gap:12px}.kpi div{padding:20px;background:rgba(0,0,0,.16);border:1px solid var(--line);border-radius:14px}.kpi b{font-size:30px;color:var(--accent);display:block}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:25px}.filter{border:1px solid var(--line);background:var(--panel);color:var(--muted);padding:8px 12px;border-radius:8px;cursor:pointer}.filter.active{background:var(--accent);color:#06100b}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.card{background:var(--panel);border:1px solid var(--line);border-radius:17px;padding:25px;display:flex;flex-direction:column;min-height:270px}.card:hover{border-color:#37614d}.card .tag{font-size:11px;color:var(--accent);text-transform:uppercase;letter-spacing:1.5px}.card h3{font-size:24px;margin:9px 0}.card p{color:var(--muted);font-size:14px}.tools{display:flex;gap:7px;flex-wrap:wrap;margin-top:auto}.tools span{font-size:11px;padding:5px 8px;border:1px solid var(--line);border-radius:6px;color:#b9ccc2}.card-actions{display:flex;gap:8px;margin-top:18px}.small{font-size:12px;padding:8px 10px}
+.timeline{border-left:1px solid var(--line);padding-left:30px}.job{margin-bottom:35px;position:relative}.job:before{content:"";position:absolute;width:9px;height:9px;border-radius:50%;background:var(--accent);left:-35px;top:8px}.job h3{margin:0}.job .date{color:var(--accent);font-size:12px}.job p{color:var(--muted);max-width:750px}
+.contact{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:45px;text-align:center}.contact h2{font-size:42px;margin:0}.contact p{color:var(--muted)}footer{padding:35px 0;color:var(--muted);font-size:13px;border-top:1px solid var(--line);margin-top:80px}
+.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:30;align-items:center;justify-content:center;padding:20px}.modal.show{display:flex}.modalbox{width:min(620px,100%);max-height:90vh;overflow:auto;background:#0b1712;border:1px solid var(--line);border-radius:18px;padding:28px}.modalbox h2{margin-top:0}.form{display:grid;gap:13px}.form label{font-size:12px;color:var(--muted)}.form input,.form textarea,.form select{width:100%;background:#07100d;border:1px solid var(--line);color:var(--text);padding:11px;border-radius:8px}.form textarea{min-height:110px;resize:vertical}.formrow{display:grid;grid-template-columns:1fr 1fr;gap:12px}.check{display:flex;gap:8px;align-items:center;color:var(--muted);font-size:13px}.check input{width:auto}.close{float:right;cursor:pointer;color:var(--muted)}.admin-note{color:var(--muted);font-size:12px;margin-bottom:15px}
+@media(max-width:760px){nav .links{display:none}.hero{padding:70px 0}.hero h1{letter-spacing:-2px}.stats{grid-template-columns:1fr 1fr}.about,.feature,.grid{grid-template-columns:1fr}.section-head{display:block}.section-head p{margin-top:12px}.formrow{grid-template-columns:1fr}.contact{padding:30px 20px}}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><a class="logo" href="#">RK<span>.</span></a><div class="links"><a href="#about">About</a><a href="#work">Work</a><a href="#experience">Experience</a><a href="#contact">Contact</a><a href="#" onclick="openAdmin();return false">Admin</a></div></div></nav>
+
+<header class="hero wrap">
+<div>
+<div class="eyebrow">Data Analyst · Business Intelligence · MIS</div>
+<h1>I turn <em>business data</em> into decisions.</h1>
+<p>I'm Ritik Khare, a B.Tech CSE graduate building practical analytics solutions with Excel, SQL, Power BI and Python — from messy business data to clear insights.</p>
+<div class="actions"><a class="btn primary" href="#work">View my work →</a><a class="btn" href="#contact">Let's connect</a></div>
+</div>
+</header>
+
+<main class="wrap">
+<div class="stats"><div class="stat"><b>₹12L+</b><span>slow-moving inventory identified</span></div><div class="stat"><b>2+ yrs</b><span>data / analytics experience</span></div><div class="stat"><b>5</b><span>portfolio projects</span></div><div class="stat"><b>4+</b><span>core analytics tools</span></div></div>
+
+<section id="about"><div class="section-head"><h2>About</h2><p>Business-focused analytics with a practical, problem-solving mindset.</p></div><div class="about"><div><p>I have experience collecting, cleaning, formatting and analysing business data, then turning it into daily, weekly and monthly reporting. My strongest area is spreadsheet-based analysis, with growing depth in SQL, Power BI and Python.</p><p>I completed the Google Data Analytics Professional Certificate and have worked on real inventory and sales problems at STAR ENTERPRISES.</p></div><div><h3>Toolkit</h3><div class="skills"><span class="skill">Excel</span><span class="skill">SQL</span><span class="skill">Power BI</span><span class="skill">Python</span><span class="skill">Pandas</span><span class="skill">Power Query</span><span class="skill">DAX</span><span class="skill">Data Cleaning</span><span class="skill">Business Analysis</span><span class="skill">AI</span></div></div></div></section>
+
+<section><div class="feature"><div><div class="eyebrow">Featured · Real Business Project</div><h3>Inventory Optimization Analytics System</h3><p>Restructured inventory information to improve visibility into slow-moving and dead stock. The analysis helped identify approximately ₹12 lakh worth of slow-moving inventory and made stock review substantially faster.</p><div class="actions"><a class="btn primary" href="#work">Explore case study →</a></div></div><div class="kpi"><div><b>₹12L+</b><span>identified slow-moving stock</span></div><div><b>70–90%</b><span>faster dead-stock visibility</span></div><div><b>Excel</b><span>core analysis workflow</span></div><div><b>Business</b><span>inventory decision support</span></div></div></div></section>
+
+<section id="work"><div class="section-head"><h2>Selected work</h2><p>Projects can be added, edited, hidden or removed from the Admin panel.</p></div><div id="filters" class="filters"></div><div id="projectGrid" class="grid"></div></section>
+
+<section id="experience"><div class="section-head"><h2>Experience</h2><p>Real work, responsibilities and measurable outcomes.</p></div><div class="timeline"><div class="job"><div class="date">NOV 2024 — JUN 2026</div><h3>Data Analyst · STAR ENTERPRISES</h3><p>Gathered, cleaned, formatted and analysed business data; prepared daily, weekly and monthly sales reporting; supported inventory analysis and identified slow-moving stock.</p></div><div class="job"><div class="date">MAR 2024 — NOV 2024</div><h3>Junior Data Analyst / Intern · STAR ENTERPRISES</h3><p>Worked on data preparation, reporting and inventory digitisation, building practical experience with business data and operational reporting.</p></div></div></section>
+
+<section><div class="section-head"><h2>Education & certification</h2></div><div class="about"><div><h3>B.Tech — Computer Science & Engineering</h3><p>Sam Global University</p></div><div><h3>Google Data Analytics Professional Certificate</h3><p>Coursera · Data cleaning, analysis, visualization and business problem solving.</p></div></div></section>
+
+<section id="contact"><div class="contact"><h2>Let's work with data.</h2><p>Open to Data Analyst, Business Analyst and MIS opportunities.</p><div class="actions" style="justify-content:center"><a class="btn primary" href="mailto:YOUR_EMAIL@example.com">Email me</a><a class="btn" href="https://www.linkedin.com/" target="_blank">LinkedIn</a><a class="btn" href="https://github.com/" target="_blank">GitHub</a></div></div></section>
+</main>
+<footer><div class="wrap">© <span id="year"></span> Ritik Khare · Built for analytics.</div></footer>
+
+<div id="modal" class="modal"><div class="modalbox"><span class="close" onclick="closeAdmin()">✕</span><h2>Project Manager</h2><div class="admin-note">Changes are saved in this browser using local storage. Use Export/Import to move your project data between devices.</div><div id="adminContent"></div></div></div>
+
+<script>
+const starter=[
+{id:1,title:"Inventory Optimization Analytics System",category:"Real Business",desc:"Inventory analysis focused on slow-moving and dead stock visibility, helping identify approximately ₹12 lakh in slow-moving inventory.",tools:["Excel","SQL","Power BI"],featured:true,visible:true,link:"#"},
+{id:2,title:"Pizza Sales Analysis",category:"Analytics",desc:"Sales analysis covering trends, product performance, customer insights and revenue contribution using a cleaned transactional dataset.",tools:["Excel","SQL","Pandas"],featured:false,visible:true,link:"#"},
+{id:3,title:"Sales Performance Dashboard",category:"Dashboard",desc:"Interactive business dashboard concept for tracking sales KPIs, trends, product performance and management-level insights.",tools:["Power BI","DAX","Power Query"],featured:false,visible:true,link:"#"},
+{id:4,title:"Healthcare Lead Campaign Analytics",category:"Marketing Analytics",desc:"Lead-generation workflow analysis using Meta Ads, forms, Google Sheets and automation to structure campaign feedback and lead data.",tools:["Meta Ads","Sheets","Zapier"],featured:false,visible:true,link:"#"},
+{id:5,title:"Business Sales Analysis",category:"Analytics",desc:"A structured analytics project focused on finding meaningful differences in order values, products and sales patterns and translating findings into business actions.",tools:["Excel","SQL"],featured:false,visible:true,link:"#"}
+];
+let projects=JSON.parse(localStorage.getItem("ritikProjects")||"null")||starter;
+let active="All";
+function save(){localStorage.setItem("ritikProjects",JSON.stringify(projects));render();}
+function render(){
+ const cats=["All",...new Set(projects.map(p=>p.category))];
+ document.getElementById("filters").innerHTML=cats.map(c=>`<button class="filter ${active===c?'active':''}" onclick="active='${esc(c)}';render()">${esc(c)}</button>`).join("");
+ const list=projects.filter(p=>p.visible!==false && (active==="All"||p.category===active));
+ document.getElementById("projectGrid").innerHTML=list.length?list.map(p=>`<article class="card"><div class="tag">${esc(p.category)}${p.featured?" · Featured":""}</div><h3>${esc(p.title)}</h3><p>${esc(p.desc)}</p><div class="tools">${p.tools.map(t=>`<span>${esc(t)}</span>`).join("")}</div><div class="card-actions">${p.link&&p.link!=="#" ? `<a class="btn small" href="${esc(p.link)}" target="_blank">View project →</a>`:""}</div></article>`).join(""):`<p style="color:var(--muted)">No visible projects in this category.</p>`;
+}
+function esc(s){return String(s||"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]));}
+function openAdmin(){document.getElementById("modal").classList.add("show");admin();}function closeAdmin(){document.getElementById("modal").classList.remove("show");}
+function admin(){
+ const rows=projects.map(p=>`<div style="border:1px solid var(--line);padding:15px;border-radius:12px;margin-bottom:10px"><b>${esc(p.title)}</b><div style="color:var(--muted);font-size:12px">${esc(p.category)} · ${p.visible!==false?"Visible":"Hidden"}</div><div class="actions"><button class="btn small" onclick="editProject(${p.id})">Edit</button><button class="btn small" onclick="toggleProject(${p.id})">${p.visible!==false?"Hide":"Show"}</button><button class="btn small" style="color:var(--danger)" onclick="deleteProject(${p.id})">Delete</button></div></div>`).join("");
+document.getElementById("adminContent").innerHTML=`<div class="actions" style="margin:0 0 20px"><button class="btn primary" onclick="editProject()">+ Add project</button><button class="btn" onclick="exportData()">Export</button><button class="btn" onclick="document.getElementById('importFile').click()">Import</button><input id="importFile" type="file" accept=".json" style="display:none" onchange="importData(event)"></div>${rows}`;
+}
+function editProject(id){
+ const p=id?projects.find(x=>x.id===id):{title:"",category:"Analytics",desc:"",tools:[],featured:false,visible:true,link:"#"};
+ document.getElementById("adminContent").innerHTML=`<form class="form" onsubmit="submitProject(event,${id||0})"><label>Project title<input id="pt" required value="${esc(p.title)}"></label><div class="formrow"><label>Category<input id="pc" value="${esc(p.category)}"></label><label>Tools (comma separated)<input id="px" value="${esc(p.tools.join(", "))}"></label></div><label>Description<textarea id="pd" required>${esc(p.desc)}</textarea></label><label>Project link<input id="pl" value="${esc(p.link||"#")}"></label><label class="check"><input id="pf" type="checkbox" ${p.featured?"checked":""}> Featured project</label><label class="check"><input id="pv" type="checkbox" ${p.visible!==false?"checked":""}> Visible on portfolio</label><div class="actions"><button class="btn primary" type="submit">Save project</button><button class="btn" type="button" onclick="admin()">Cancel</button></div></form>`;
+}
+function submitProject(e,id){e.preventDefault();const obj={id:id||Date.now(),title:pt.value,category:pc.value||"Analytics",desc:pd.value,tools:px.value.split(",").map(x=>x.trim()).filter(Boolean),link:pl.value||"#",featured:pf.checked,visible:pv.checked};if(id)projects=projects.map(p=>p.id===id?obj:p);else projects.push(obj);save();admin();}
+function deleteProject(id){if(confirm("Delete this project?")){projects=projects.filter(p=>p.id!==id);save();admin();}}
+function toggleProject(id){projects=projects.map(p=>p.id===id?{...p,visible:p.visible===false}:p);save();admin();}
+function exportData(){const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([JSON.stringify(projects,null,2)],{type:"application/json"}));a.download="ritik-projects.json";a.click();}
+function importData(e){const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{try{projects=JSON.parse(r.result);save();admin();}catch{alert("Invalid project file.")}};r.readAsText(f);}
+document.getElementById("year").textContent=new Date().getFullYear();render();
+</script>
+</body>
+</html>
